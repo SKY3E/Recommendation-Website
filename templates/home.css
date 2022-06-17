@@ -13,7 +13,8 @@
   flex-direction: row;
   row-gap: 5px;
 
-  font-family: "Roboto";
+  font-family: "Yanone Kaffeesatz";
+  font-size: 22px;
   font-weight: 500;
   background-color: rgb(181, 202, 200);
 }
