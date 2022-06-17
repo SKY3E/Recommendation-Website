@@ -16,6 +16,12 @@
       <a class="page-title-add-button-link"  href="/"> Home </a>
     </div>
 
+    <div class="form-explain">
+      <div class="form-explain-text">
+        <h4>Below is a form you can fill to create a new addition to the recommendation database :</h4>
+      </div>
+    </div>
+
     <div>
       <form method="POST" action="{% url 'uploadform' %}" enctype="multipart/form-data">
         {% csrf_token %}
