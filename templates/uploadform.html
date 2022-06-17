@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link type="text/css" rel="stylesheet" href="templates/uploadform.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body style="height: 1000px;">
+    <div class="page-title">
+      <h1 class="page-title-text">Book & Movie & Series Recommendations</h1>
+    </div>
+    <div class="page-title-add-button-div">
+      <a class="page-title-add-button-link"  href="/"> Home </a>
+    </div>
+
+    <div>
+      <form method="POST" action="{% url 'uploadform' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+          <input class="form-group-input" type="text" id="name" name="name" placeholder="Title">
+          <input class="form-group-input" type="text" id="details" name="details" placeholder="Summary">
+          <input class="form-group-input" type="text" id="littype" name="littype" placeholder="Type of Literature">
+          <input class="form-group-input" type="file" id="image" name="image" placeholder="Cover Picture">
+          <input class="form-group-input-submit" type="submit" value="New Recommendation">
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
