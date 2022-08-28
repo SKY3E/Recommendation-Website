@@ -4,9 +4,9 @@ from django.shortcuts import render, redirect
 from .models import info, PostForm
 
 # Create your views here.
-def index(request):
+def home(request):
   litinfo = info.objects.all()
-  return render(request, 'index.html', {'litinfo': litinfo})
+  return render(request, 'home.html', {'litinfo': litinfo})
 
 def uploadform(request):
   if request.method == 'POST':
